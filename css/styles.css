@@ -471,4 +471,25 @@ img {
   background-color: #31d0aa;
 }
 
+.subscribe {}
+
+.subscribe-submit {
+  display: flex;
+  gap: 24px;
+}
+
+.email-field {}
+
+.subscribe-btn {
+  padding: 8px 24px;
+}
+
+.subscribe-icon {
+  margin-left: 16px;
+}
+
+/* #endregion */
+
+/* #region Modal */
+
 /* #endregion */
