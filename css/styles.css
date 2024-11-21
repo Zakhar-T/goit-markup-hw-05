@@ -488,11 +488,16 @@ input {
 .email-field {
   background-color: inherit;
   border: 1px solid #fff;
+  color: #fff;
   border-radius: 4px;
-  padding: 0;
+  padding: 8px 16px;
   width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.email-field:focus::placeholder {
+  opacity: 0;
 }
 
 .email-field::placeholder {
@@ -500,7 +505,6 @@ input {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
-  padding: 8px 16px;
 }
 
 .subscribe-btn {
@@ -517,6 +521,11 @@ input {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #404bbf;
 }
 
 .subscribe-icon {
