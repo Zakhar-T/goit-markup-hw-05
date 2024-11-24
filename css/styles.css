@@ -516,11 +516,12 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  min-width: 165px;
 }
 
 .subscribe-icon {
   fill: #fff;
+  margin-left: 16px;
 }
 
 /* #endregion */
@@ -558,6 +559,7 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -577,16 +579,20 @@ input {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  padding: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, border;
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
-  border-color: #404bbf;
+  border: none;
 }
 
 .icon-close {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover > .icon-close,
@@ -638,7 +644,8 @@ input {
   height: 40px;
   width: 100%;
   padding-left: 38px;
-  outline: none;
+  outline: transparent;
+  background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
@@ -665,6 +672,9 @@ input {
   line-height: 1.17;
   letter-spacing: 0.04em;
   resize: none;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  background-color: transparent;
 }
 
 .modal-comment-field::placeholder {
@@ -672,12 +682,16 @@ input {
 }
 
 .modal-form-agreement {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 input[type="checkbox"]:checked + .modal-agreement-text > .custom-checkbox {
   background-color: #404bbf;
-  border: 1px solid #404bbf;
+  border: none;
+}
+
+input[type="checkbox"]:checked+.modal-agreement-text .checkbox-tick {
+  fill: #F4F4FD;
 }
 
 input[type="checkbox"]:focus-visible + .modal-agreement-text>.custom-checkbox {
@@ -697,11 +711,11 @@ input[type="checkbox"]:focus-visible + .modal-agreement-text>.custom-checkbox {
   margin-right: 8px;
   cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-color, background-color;
+  transition-property: border, background-color, fill;
 }
 
 .checkbox-tick {
-  fill: #fff;
+  fill: transparent;
 }
 
 .modal-agreement-text {
@@ -720,7 +734,7 @@ input[type="checkbox"]:focus-visible + .modal-agreement-text>.custom-checkbox {
 .submit-btn {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   margin: 0 auto;
 }
 
